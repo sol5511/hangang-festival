@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'pre-re';
+    src: url('../font/PRETENDARD-REGULAR.OTF');
+}
+@font-face {
+    font-family: 'pre-semibold';
+    src: url('../font/PRETENDARD-SEMIBOLD.OTF');
+}
+@font-face {
+    font-family: 'agro-l';
+    src: url('../font/SB\ 어그로\ L.TTF');
+}
+@font-face {
+    font-family: 'agro-m';
+    src: url('../font/SB\ 어그로\ M.TTF');
+}
+@font-face {
+    font-family: 'agro-b';
+    src: url('../font/SB\ 어그로\ B.TTF');
+}
+* {
+    font-family: 'pre-re';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* ---------- header ---------- */
+header nav {
+    z-index: 999;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid #000;
+    position: fixed;
+}
+header nav .logo {
+    width: 25%;
+    background-color: #fff;
+    padding-left: 80px;
+    padding-top: 5px;
+}
+header nav .list {
+    width: 75%;
+    background-color: #000;
+}
+header nav .list ul {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 90px;
+}
+header nav .list ul li > a {
+    color: #fff;
+    font-size: 19px;
+    line-height: 65px;
+    font-family: 'pre-semibold';
+}
+header nav .list ul li > a:hover {
+    color: #C2A5F9;
+}
+header nav .list ul li .sub-menu {
+    z-index: 2;
+    position: absolute;
+    top: 65px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+header nav .list ul li .sub-menu a:hover {
+    color: #9166e2;
+}
+.sub-menu-bg {
+    width: 100%;
+    height: 320px;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 1px 5px 8px #ddd;
+    position: absolute;
+    top: 65px; left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+header nav .list ul li .sub-menu a {
+    display: block;
+    margin-top: 22px;
+    font-size: 17px;
+    color: rgb(41, 41, 41);
+}
+header nav:hover ul li .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+header nav:hover .sub-menu-bg {
+    opacity: 1;
+    visibility: visible;
+}
+header nav .right {
+    position: absolute;
+    right: 80px; top: 18px;
+    cursor: pointer;
+}
+/* ---------- main 1 ---------- */
+main {
+    position: relative;
+}
+main .sect1 {
+    padding-top: 200px;
+    position: relative;
+}
+main .sect1 h2 {
+    font-family: 'agro-b';
+    text-align: center;
+    font-size: 90px;
+    margin-bottom: 70px;
+    position: relative;
+}
+main .sect1 h2::before {
+    display: block;
+    content: '';
+    width: 145px;
+    height: 60px;
+    background: url('../images/sect1-img-2.png') no-repeat center;
+    position: absolute;
+    top: 15px; left: 680px;
+}
+main .sect1 h2::after {
+    display: block;
+    content: '';
+    width: 145px;
+    height: 60px;
+    background: url('../images/sect1-img-2.png') no-repeat center;
+    position: absolute;
+    top: 15px; right: 680px;
+}
+main .sect1 .list {
+    width: 60%;
+    height: 85px;
+    background: #F3F3F3;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+main .sect1 .list ul {
+    width: 82%;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    line-height: 85px;
+    font-size: 24px;
+    color: #6B6B6B;
+    font-weight: 600;
+}
+main .sect1 .list ul li {
+    transition: all .3s;
+}
+main .sect1 .list ul li::after {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 65px; left: 20px;
+    display: block;
+    content: '';
+    background-color: #358ACB;
+    display: none;
+}
+main .sect1 .list ul li:hover {
+    cursor: pointer;
+    color: #358ACB;
+}
+main .sect1 .list ul li:hover::after {
+    display: block;
+}
+main .sect1 .text {
+    text-align: center;
+    margin-top: 150px;
+}
+main .sect1 .text h3 {
+    font-size: 3rem;
+    color: #358ACB;
+}
+main .sect1 .text p {
+    margin: 70px 0 120px 0;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #B1B1B1;
+}
+main .sect1 .text p b {
+    color: #6e6e6e;
+    font-weight: 600;
+}
+main .sect1 .bg-icon-1 {
+    width: 400px;
+    height: 400px;
+    background: url('../images/sub1-ic-1.png') no-repeat center/contain;
+    position: absolute;
+    top: 500px; right: -100px;
+}
+main .sect1 .bg-icon-2 {
+    width: 100px;
+    height: 100px;
+    background: url('../images/sub1-ic-2.png') no-repeat center/cover;
+    position: absolute;
+    bottom: 340px; left: 330px;
+}
+/* ---------- main 2 ---------- */
+main .sect2 {
+    height: 2560px;
+    position: relative;
+    z-index: 9;
+}
+main .sect2 .inner {
+    height: 107%;
+    background: url(../images/sub_bg_1.png)no-repeat top center/cover;
+    padding: 240px 0 240px 0;
+}
+main .sect2 .inner .cont > div {
+    display: flex;
+    margin: 60px 0 60px 0;
+    margin: 110px 120px 110px 120px;
+}
+main .sect2 .inner .cont .box {
+    margin-right: 50px;
+    width: 340px;
+}
+main .sect2 .inner .cont .box a p {
+    margin-bottom: 20px;
+}
+main .sect2 .inner .cont .box a img {
+    width: 100%;
+    height: 470px;
+    display: block;
+    border: 2px solid #000;
+}
+main .sect2 .inner .cont a p {
+    font-size: 35px;
+    font-family: 'agro-m';
+}
+main .sect2 .inner .cont .two {
+    justify-content: end;
+}
+main .sect2 .bg-icon-3 {
+    width: 100px;
+    height: 100px;
+    background: url('../images/sub1-ic-3.png') no-repeat center/contain;
+    position: absolute;
+    top: 1200px; left: 100px;
+}
+main .sect2 .bg-icon-4 {
+    width: 200px;
+    height: 200px;
+    background: url('../images/sub1-ic-4.png') no-repeat center/cover;
+    position: absolute;
+    bottom: 350px; right: 140px;
+}
+/* ---------- footer ---------- */
+footer a, footer p {
+    color: #fff;
+    font-family: 'Pretendard-Regular';
+}
+footer {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    padding-top: 100px;
+}
+footer .inner {
+    width: 90%;
+    padding: 80px 60px;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .inner .left  {
+    width:30%;
+    margin: 0 auto;
+}
+footer .inner .left a {
+    width: 260px;
+    height: 100px;
+    background: url(../images/hangang\ logo.png) no-repeat center/contain;
+    display: block;
+}
+footer .inner .mid {
+    width: 40%;
+}
+footer .inner .mid .top {
+    padding: 20px 0;
+}
+footer .inner .mid .top a {
+   font-size: 1.2rem;
+   padding: 0 13% 0 0;
+   font-weight: bold;
+}
+footer .inner .mid .btn p {
+    font-size: 1.1rem;
+    line-height: 35px;
+}
+footer .inner .mid .btn .copyright {
+    font-size: 1rem;
+}
+footer .inner .right {
+    width: 30%;
+    position: relative;
+}
+footer .inner .right .snslogo {
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+    position: relative;
+}
+footer .inner .right .snslogo .insta {
+    position: absolute;
+    left: 10%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/insta.png) no-repeat center/contain;
+}
+footer .inner .right .snslogo .youtube {
+    position: absolute;
+    top: 0; left: 37%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/youtube\ 1.png) no-repeat center/contain;
+}
+footer .inner .right .snslogo .facebook {
+    position: absolute;
+    top: 0; left: 60%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/facebook\ 1.png) no-repeat center/contain;
+}
+footer .inner .right .hangangpark a {
+width: 250px;
+height: 100px;
+background: url(../images/h_logo.png) no-repeat center/contain;
+display: block;
+position: absolute;
+bottom: 0%; right: 35%;
+}
+.gotop {
+    width: 100px; height: 100px;
+    background: url(../images/gotop.png) no-repeat center/contain;
+    position: absolute;
+    right: 7%; bottom: 330px;
+    z-index: 9;
+    cursor: pointer;
+}

@@ -1,0 +1,775 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'pre-re';
+    src: url('../font/PRETENDARD-REGULAR.OTF');
+}
+@font-face {
+    font-family: 'pre-semibold';
+    src: url('../font/PRETENDARD-SEMIBOLD.OTF');
+}
+@font-face {
+    font-family: 'agro-m';
+    src: url('../font/SB\ 어그로\ M.TTF');
+}
+@font-face {
+    font-family: 'agro-b';
+    src: url('../font/SB\ 어그로\ B.TTF');
+}
+* {
+    font-family: 'pre-re';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* ---------- header ---------- */
+body {
+    overflow-x: hidden;
+}
+header nav {
+    z-index: 999;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid #000;
+    position: fixed;
+}
+header nav .logo {
+    width: 25%;
+    background-color: #fff;
+    padding-left: 80px;
+    padding-top: 5px;
+}
+header nav .list {
+    width: 75%;
+    background-color: #000;
+}
+header nav .list ul {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 90px;
+}
+header nav .list ul li > a {
+    color: #fff;
+    font-size: 19px;
+    line-height: 65px;
+    font-family: 'pre-semibold';
+}
+header nav .list ul li > a:hover {
+    color: #C2A5F9;
+}
+header nav .list ul li .sub-menu {
+    z-index: 2;
+    position: absolute;
+    top: 65px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+header nav .list ul li .sub-menu a:hover {
+    color: #9166e2;
+}
+.sub-menu-bg {
+    width: 100%;
+    height: 320px;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 1px 5px 8px #ddd;
+    position: absolute;
+    top: 65px; left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+header nav .list ul li .sub-menu a {
+    display: block;
+    margin-top: 22px;
+    font-size: 17px;
+    color: rgb(41, 41, 41);
+}
+header nav:hover ul li .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+header nav:hover .sub-menu-bg {
+    opacity: 1;
+    visibility: visible;
+}
+header nav .right {
+    position: absolute;
+    right: 80px; top: 18px;
+    cursor: pointer;
+}
+header .title {
+    position: relative;
+    overflow: hidden;
+}
+header .title .text-img {
+    padding: 140px 0;
+}
+header .title .cloud-ani.one {
+    width: 250px;
+    height: 80px;
+    position: absolute;
+    top: 10%; left: 15%;
+    background: url('../images/cloud1.png') no-repeat center;
+    animation: cloud-1 3s infinite linear;
+}
+header .title .cloud-ani.two {
+    width: 250px;
+    height: 80px;
+    position: absolute;
+    top: 35%; right: 13%;
+    background: url('../images/cloud2.png') no-repeat center;
+    animation: cloud-2 3.5s infinite linear;
+}
+header .title .cloud-ani.three {
+    width: 280px;
+    height: 110px;
+    position: absolute;
+    top: 18%; right: 3%;
+    background: url('../images/cloud3.png') no-repeat center;
+    animation: cloud-3 3.8s infinite linear;
+}
+@keyframes cloud-1 {
+    0% {
+        top: 10%;
+    }
+    50% {
+        top: 13%;
+    }
+}
+@keyframes cloud-2 {
+    0% {
+        top: 35%;
+    }
+    50% {
+        top: 38%;
+    }
+}
+@keyframes cloud-3 {
+    0% {
+        top: 18%;
+    }
+    50% {
+        top: 21%;
+    }
+}
+.titlebelt, .titlebelt2 {
+    width: 2750px;
+    height: 110px;
+    font-size: 50px;
+}
+.titlebelt .top {
+    border-top: 2px solid #000;
+    overflow: hidden;
+    line-height: 2.2;
+}
+.titlebelt2 .bt {
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    line-height: 2.2;
+}
+.swiper-wrapper{
+    transition-timing-function: linear;
+}
+/* ---------- main 1 ---------- */
+main .sect1 {
+    position: relative;
+    margin-top: 250px;
+}
+main .sect1 h2 {
+    font-family: 'agro-b';
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 70px;
+}
+main .sect1 .sect1-img-1 {
+    position: absolute;
+    top: -22px; left: 200px;
+}
+main .sect1 .sect1-img-3 {
+    position: absolute;
+    bottom: -120px; right: 100px;
+}
+main .sect1 h2::before {
+    display: block;
+    content: '';
+    width: 145px;
+    height: 60px;
+    background: url('../images/sect1-img-2.png') no-repeat center;
+    position: absolute;
+    top: 0; left: 550px;
+}
+main .sect1 h2::after {
+    display: block;
+    content: '';
+    width: 145px;
+    height: 60px;
+    background: url('../images/sect1-img-2.png') no-repeat center;
+    position: absolute;
+    top: 0; right: 550px;
+}
+main .sect1 .list {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: 50px;
+}
+main .sect1 .list ul {
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+main .sect1 .list ul li {
+    cursor: pointer;
+    width: 33.33%;
+    height: 75px;
+    border-left: 1px solid #000;
+    font-size: 32px;
+    line-height: 75px;
+    text-align: center;
+}
+main .sect1 .list ul li:nth-child(3) {
+    border-right: 1px solid;
+}
+main .sect1 .list ul li:hover {
+    border: 2px solid #000;
+    font-weight: 600;
+}
+main .sect1 .swiper.poster {
+    width: 65%;
+    height: 540px;
+    margin-bottom: 70px;
+}
+main .sect1 .swiper .swiper-wrapper {
+    width: 100%;
+    display: flex;
+}
+main .sect1 > .swiper .swiper-slide {
+    border: 2px solid #000;
+}
+main .sect1 .swiper .swiper-slide a img {
+    display: block;
+    width: 100%;
+}
+main .sect1 .swiper .swiper-slide a .text {
+    margin-left: 22px;
+    margin-top: 22px;
+}
+main .sect1 .swiper .swiper-slide a .text .top {
+    color: #358ACB;
+}
+main .sect1 .swiper .swiper-slide a .text .bt {
+    font-size: 20px;
+    font-family: 'agro-m';
+    margin-top: 30px;
+}
+main .sect1 .swiper-btn-next {
+    cursor: pointer;
+    width: 76px;
+    height: 76px;
+    background: url('../images/next.png') no-repeat center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    z-index: 1;
+}
+main .sect1 .swiper-btn-prev {
+    cursor: pointer;
+    width: 76px;
+    height: 76px;
+    background: url('../images/prev.png') no-repeat center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    z-index: 1;
+}
+main .sect1 .date-box {
+    border: 1px solid #000;
+    width: 70%;
+    height: 90px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    padding: 0 85px;
+    position: relative;
+}
+main .sect1 .date-box .swiper {
+    width: 100%;
+    height: 100%;
+}
+main .sect1 .date-box .swiper .swiper-slide {
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 12px;
+    font-size: 17px;
+}
+main .sect1 .date-box .swiper .swiper-slide p {
+    display: flex;
+    justify-content: center;
+}
+main .sect1 .date-box .swiper .swiper-slide p span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #358ACB;
+}
+main .sect1 .date-box .swiper .swiper-slide p span:nth-child(2) {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #9dccf0;
+}
+main .sect1 .date-box .swiper .swiper-slide a div {
+    line-height: 20px;
+}
+main .sect1 .date-box .swiper-btn2-next {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: url('../images/next2.png');
+    position: absolute;
+    top: 30px; right: 30px;
+}
+main .sect1 .date-box .swiper-btn2-prev {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: url('../images/prev2.png');
+    position: absolute;
+    top: 30px; left: 30px;
+}
+
+/*-------------------- 미솔 시작! -------------------- */
+/* -----------------------------🎈main🎈--------------------------- */
+main {
+    position: relative;
+}
+/* --------------------where----------------- */
+main .where {
+    width: 100%;
+    height: 98vh;
+    background: url(../images/wherebg.png)no-repeat center/100%; 
+    position: relative;
+}
+main .where .inner {
+    width: 100%;
+    padding: 8% 2%;
+    position: relative;
+}
+main .where .inner .whereic {
+    width: 160px; height: 160px;
+    background: url(../images/where_ic.png) no-repeat center/contain;
+    position: absolute;
+    top: 13%; left: 5%;
+    z-index: 9;
+}
+main .where .inner h1 {
+    font-size: 130px;
+    font-family: 'agro-b';
+    line-height: 2;
+    letter-spacing: -5px;
+    margin-left: 120px;
+    
+    position: relative;
+    z-index: 10;
+}
+main .where .inner .tabmenu {
+    display: flex;
+    width: 100%;
+}
+main .where .inner .tabmenu .tabnav {
+    width: 950px;
+    height: 450px;
+    background: url(../images/where_left.png) no-repeat 60% 70%/100%;
+    position: relative;
+    margin-top: 20px;
+}
+main .where .inner .tabmenu .tabnav li {
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+}
+main .where .inner .tabmenu .tabnav li.on {
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(1){
+    /* 강서 */
+    width: 70px;
+    top: 125px; left: 70px;
+    background: url(../images/flower.png) no-repeat 100% 80%;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(2){
+    /* 양화 */
+    width: 70px;
+    top: 200px; left: 130px;
+    background: url(../images/flower.png) no-repeat 100% 80%;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(3){
+    /* 난지 */
+    width: 100px;
+    top: 90px; left: 220px;
+    background: url(../images/flower.png) no-repeat 0% 80%;
+    text-align: center;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(4){
+    /* 망원 */
+    width: 100px;
+    top: 150px; left: 290px;
+    background: url(../images/flower.png) no-repeat 0% 80%;
+    text-align: center;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(5){
+    /* 여의도 */
+    width: 120px;
+    height: 150px;
+    top: 250px; left: 230px;
+    background: url(../images/flower.png) no-repeat 50% 0% ;
+    text-align: center;
+    line-height: 75px;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(6){
+    /* 이촌 */
+    width: 120px;
+    height: 60px;
+    top: 250px; right: 400px;
+    background: url(../images/flower.png) no-repeat  50% 100% ;
+    text-align: center;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(7){
+    /* 반포 */
+    width: 120px;
+    height: 150px;
+    top: 390px; right: 330px;
+    background: url(../images/flower.png) no-repeat 50% 0% ;
+    text-align: center;
+    line-height: 75px;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(8){
+    /* 잠원 */
+    width: 120px;
+    height: 150px;
+    top: 330px; right: 230px;
+    background: url(../images/flower.png) no-repeat 50% 0% ;
+    text-align: center;
+    line-height: 75px;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(9){
+   /* 뚝섬 */
+    width: 120px;
+    height: 60px;
+    top: 180px; right: 150px;
+    background: url(../images/flower.png) no-repeat  50% 100% ;
+    text-align: center;
+}
+main .where .inner .tabmenu .tabnav li:nth-child(10){
+    /* 잠실 */
+    width: 120px;
+    height: 150px; 
+    top: 320px; right: 70px;
+    background: url(../images/flower.png) no-repeat 50% 0% ;
+    text-align: center;
+    line-height: 75px;
+ }
+ main .where .inner .tabmenu .tabnav li:nth-child(11){
+    /* 강나루 */
+    width: 120px;
+    height: 60px;
+    top: 100px; right: 20px;
+    background: url(../images/flower.png) no-repeat  50% 100% ;
+    text-align: center;
+ }
+ main .where .inner .tabmenu .tabmap {
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+main .where .inner .tabmenu .tabmap span {
+    position: absolute;
+    width: 200px; height: 100px;
+    background: url(../images/cloud.png) no-repeat center;
+    top: -130px; left: -110px;
+    z-index: 1; 
+}
+main .where .inner .tabmenu .tabmap .map {
+    width: 100%;
+    position: absolute;
+    top: -30%; right: 10%;
+    background-color: #F5F5E9;
+}
+
+main .where .inner .tabmenu .tabmap .map h2 {
+    font-size: 60px;
+    color: #358ACB;
+    font-family: 'agro-m';
+    position: absolute;
+    z-index: 2;
+    font-weight: 1;
+}
+main .where .inner .tabmenu .tabmap img {
+    width: 130%;
+}
+
+
+/* -------------------notice----------------- */
+main .notice {
+    border-top: 2px solid #000;
+}
+main .notice .inner {
+    width: 100%;
+    padding: 2% 11%;
+    position: relative;
+}
+main .notice .inner .noticeic {
+    width: 190px; height: 190px;
+    background: url(../images/notice_ic.png) no-repeat center/contain;
+    position: absolute; 
+    top: 9%; right: 5%;
+    z-index: -1;
+}
+main .notice .inner h1 {
+    font-size: 130px;
+    font-family: 'SBAggroB';
+    line-height: 2;
+    text-align: right;
+    letter-spacing: -5px;
+}
+main .notice .inner .noticecontent li {
+    width: 100%;
+}
+main .notice .inner .noticecontent li:hover {
+    color: #358ACB;
+    font-weight: bold;
+}
+main .notice .inner .noticecontent a {
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+}
+main .notice .inner .noticecontent li a span{
+    background: url(../images/notice_sky.png) no-repeat center ;
+    width: 200px; height: 100px;
+    z-index: -1;
+    position: absolute;
+    top: -32px; left: -30px;
+}
+main .notice .inner .noticecontent li a .date {
+    font-size: 28px;
+    text-align: center;
+    height: 60px;
+}
+main .notice .inner .noticecontent li a .txt {
+    font-size: 32px;
+    padding-left: 100px;
+}
+
+
+/* ------------------partnership------------- */
+main .partnership {
+    width: 100%;
+    height: 66vh;
+    background: url(../images/partnership\ bg.png)no-repeat center/100%;
+    border-top: 2px solid #000;
+    position: relative;
+    top: 100px;
+    z-index: 9;
+}
+main .partnership .inner {
+    width: 100%;
+    padding: 5% 15%;
+    position: relative;
+}
+main .partnership .inner .txt {
+    width: 30%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 70px;
+}
+main .partnership .inner .txt h1 {
+    font-size: 60px;
+    font-family: 'agro-b';
+    line-height: 1.8;
+    position: absolute;
+    left: -40px;
+
+}
+main .partnership .inner .txt span {
+    width: 150px;
+    height: 100px;
+    background: url(../images/sky.png) no-repeat center/contain;
+    display: block;
+}
+main .partnership .inner .txt .left {
+    position: absolute;
+    top: 0; left: 550px;
+}
+main .partnership .inner .txt .right {
+    position: absolute;
+    top: 0; right: 550px; 
+}
+
+main .partnership .inner .swiper-wrapper .swiper-slide {
+    width: 250px;
+    height: 250px;
+}
+
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(1) {
+    background: url(../images/partnership1.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(2) {
+    background: url(../images/partnership2.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(3) {
+    background: url(../images/partnership3.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(4) {
+    background: url(../images/partnership4.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(5) {
+    background: url(../images/partnership5.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(6) {
+    background: url(../images/partnership6.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(7) {
+    background: url(../images/partnership7.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(8) {
+    background: url(../images/partnership8.png) no-repeat center/contain; }
+main .partnership .inner .swiper-wrapper .swiper-slide:nth-child(9) {
+    background: url(../images/partnership9.png) no-repeat center/contain; }
+    
+main .partnership .inner .swiper-pbt-next {
+    background: url(../images/ic_arrow.png) no-repeat center;
+    position: absolute;
+    width: 100px; height: 100px;
+    top: 50%; right: 7%;
+    cursor: pointer;
+}
+main .partnership .inner .swiper-pbt-prev {
+    background: url(../images/ic_arrow.png) no-repeat center;
+    position: absolute;
+    width: 100px; height: 100px;
+    top: 50%; left: 10%;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+
+/* -----------------------------🎈footer🎈--------------------------- */
+footer a, footer p {
+    color: #fff;
+    font-family: 'Pretendard-Regular';
+}
+footer {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    padding-top: 100px;
+}
+
+footer .inner {
+    width: 90%;
+    padding: 80px 60px;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .inner .left  {
+    width:30%;
+    margin: 0 auto;
+}
+footer .inner .left a {
+    width: 260px;
+    height: 100px;
+    background: url(../images/hangang\ logo.png) no-repeat center/contain;
+    display: block;
+}
+
+footer .inner .mid {
+    width: 40%;
+}
+
+
+footer .inner .mid .top {
+    padding: 20px 0;
+}
+footer .inner .mid .top a {
+   font-size: 1.2rem;
+   padding: 0 13% 0 0;
+   font-weight: bold;
+}
+
+footer .inner .mid .btn p {
+    font-size: 1.1rem;
+    line-height: 35px;
+}
+footer .inner .mid .btn .copyright {
+    font-size: 1rem;
+}
+
+footer .inner .right {
+    width: 30%;
+    position: relative;
+}
+
+footer .inner .right .snslogo {
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer .inner .right .snslogo .insta {
+    position: absolute;
+    left: 10%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/insta.png) no-repeat center/contain;
+}
+footer .inner .right .snslogo .youtube {
+    position: absolute;
+    top: 0; left: 37%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/youtube\ 1.png) no-repeat center/contain;
+}
+
+footer .inner .right .snslogo .facebook {
+    position: absolute;
+    top: 0; left: 60%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/facebook\ 1.png) no-repeat center/contain;
+}
+
+
+footer .inner .right .hangangpark a {
+width: 250px;
+height: 100px;
+background: url(../images/h_logo.png) no-repeat center/contain;
+display: block;
+position: absolute;
+bottom: 0%; right: 35%;
+}
+
+.gotop {
+    width: 100px; height: 100px;
+    background: url(../images/gotop.png) no-repeat center/contain;
+    position: absolute;
+    right: 7%; bottom: 330px;
+    z-index: 9;
+    cursor: pointer;
+}

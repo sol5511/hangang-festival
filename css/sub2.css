@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul { list-style: none;}
+
+a { text-decoration: none;
+    color: inherit;
+    font-family: 'Pretendard-Regular';
+}
+@font-face {
+    font-family: 'aggroM';
+    src: url(../font/SB\ 어그로\ M.TTF);
+}
+@font-face {
+    font-family: 'pre-re';
+    src: url('../font/PRETENDARD-REGULAR.OTF');
+}
+@font-face {
+    font-family: 'pre-semibold';
+    src: url('../font/PRETENDARD-SEMIBOLD.OTF');
+}
+@font-face {
+    font-family: 'agro-l';
+    src: url('../font/SB\ 어그로\ L.TTF');
+}
+
+@font-face {
+    font-family: 'agro-m';
+    src: url('../font/SB\ 어그로\ M.TTF');
+}
+@font-face {
+    font-family: 'agro-b';
+    src: url('../font/SB\ 어그로\ B.TTF');
+}
+
+/* ---------- header ---------- */
+body {
+    overflow-x: hidden;
+}
+header nav {
+    z-index: 999;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid #000;
+    position: fixed;
+}
+header nav .logo {
+    width: 25%;
+    background-color: #fff;
+    padding-left: 80px;
+    padding-top: 5px;
+}
+header nav .list {
+    width: 75%;
+    background-color: #000;
+}
+header nav .list ul {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 90px;
+}
+header nav .list ul li > a {
+    color: #fff;
+    font-size: 19px;
+    line-height: 65px;
+    font-family: 'pre-semibold';
+}
+header nav .list ul li > a:hover {
+    color: #C2A5F9;
+}
+header nav .list ul li .sub-menu {
+    z-index: 2;
+    position: absolute;
+    top: 65px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+header nav .list ul li .sub-menu a:hover {
+    color: #9166e2;
+}
+.sub-menu-bg {
+    width: 100%;
+    height: 320px;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 1px 5px 8px #ddd;
+    position: absolute;
+    top: 65px; left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+header nav .list ul li .sub-menu a {
+    display: block;
+    margin-top: 22px;
+    font-size: 17px;
+    color: rgb(41, 41, 41);
+}
+header nav:hover ul li .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+header nav:hover .sub-menu-bg {
+    opacity: 1;
+    visibility: visible;
+}
+header nav .right {
+    position: absolute;
+    right: 80px; top: 18px;
+    cursor: pointer;
+}
+
+/* ---------------------section_top---------------------- */
+main  {
+    width: 100%;
+    z-index: 9;
+}
+
+main .top .inner {
+    width: 100%;
+    padding: 12% 11%;
+    position: relative;
+}
+
+main .inner .maintitle {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.top .inner .maintitle span {
+    background: url(../images/sky.png) no-repeat center ;
+    width: 200px; height: 100px;
+    position: absolute;
+} 
+.top .inner .maintitle span:nth-child(1) {
+    left: 20%; }
+.top .inner .maintitle span:nth-child(2) {
+    right: 20%; }
+
+.top .inner .maintitle h1 {
+    font-family: 'agro-b';
+    font-size: 100px;
+}
+
+.top .inner .calendar {
+    width: 1250px;
+    height: 950px;
+    background: url(../images/calendar.png) no-repeat center / contain;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 80px;
+}
+.top .inner .calendar .title {
+    display: flex;
+    justify-content: start;
+}
+.top .inner .calendar h1{
+    margin: 190px 214px;
+    font-family: 'agro-m';
+    font-weight: 200;
+}
+.top .inner .calendar p {
+    margin: 187px 33px;
+}
+.top .inner .calendar table {
+    margin: 0 auto;
+    width: 900px; height: 500px;
+    position: absolute;
+    top: 30%; left: 13%;
+}
+.top .inner .calendar table th {
+    font-family: 'agro-m';
+    font-weight: 200;
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+.top .inner .calendar table tr {
+    width: 50px; height: 50px;
+    font-family: 'Pretendard-Regular';
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.top .inner .calendar table .red {
+    color: #E50041;
+}
+.top .inner .calendar table .blue {
+    color: #3482BE;
+}
+.top .inner .calendar table tr td {
+    position: relative;
+    width: 150px; height: 80px;
+    cursor: pointer;
+}
+.top .inner .calendar table tr td.on {
+    width: 25px; height: 25px;
+    background: url(../images/calendar_pick.png) no-repeat center;
+}
+.top .inner .calendar table tr td span:nth-child(1) {
+    width: 24px; height: 24px;
+    background: url(../images/h_icon.png) no-repeat center/contain;
+    position: absolute;
+    bottom: -10%; left: 40%;
+}
+.top .inner .calendar table tr td span:nth-child(2) {
+    width: 24px; height: 24px;
+    background: url(../images/e_icon.png) no-repeat center/contain;
+    position: absolute;
+    bottom: -10%; left: 62%;
+}
+
+/* ---------------------section_btm---------------------- */
+.btm {
+    width: 100%;
+    height: 2973px;
+    background: url(../images/sub_bg2.png) no-repeat center / 100% 100%;
+    position: relative;
+    letter-spacing: -1px;
+    z-index: 9;
+}
+.btm .inner {
+    width: 100%;
+    padding: 12% 11%;
+    position: relative;
+}
+.btm .inner .data {
+    border-radius: 100px;
+    background-color: #fff;
+    width: 1350px;
+    height: 90px;
+    margin: 0 auto;
+   
+}
+.btm .inner .data ul {
+    display: flex;
+    justify-content: space-between;
+    width: 1250px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.btm .inner .data li {
+    line-height: 3.2;
+    width: 180px;
+}
+.btm .inner .data li:hover a {
+    color: #3482BE;
+    font-family: 'agro-b';
+}
+.btm .inner .data li a {
+    font-family: 'agro-l';
+    color: #585858;
+    font-size: 30px; 
+    font-weight: 100;
+}
+.btm .inner .board_wrap {
+    width: 90%;
+    margin: 50px 20px 0 100px;
+}
+.btm .inner .board_wrap p {
+    font-family: 'pre-re';
+    font-size: 30px;
+    color: #484848;
+}
+.btm .inner .board_wrap .board_list ul.box > li {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    padding-top: 50px;
+    position: relative;
+}
+.btm .inner .board_wrap .board_list .box > li > a {
+    display: flex;
+    justify-content: space-around;
+}
+.btm .inner .board_wrap .board_list .poster {
+    width: 260px; height: 380px;
+}
+
+.btm .inner .board_wrap .board_list .box li:nth-child(1) .poster{
+    background: url(../images/image1.png) no-repeat center/contain;
+}
+.btm .inner .board_wrap .board_list .box li:nth-child(2) .poster {
+    background: url(../images/image2.png) no-repeat center/contain;
+}
+.btm .inner .board_wrap .board_list .box li:nth-child(3) .poster {
+    background: url(../images/image3.png) no-repeat center/contain;
+}
+.btm .inner .board_wrap .board_list .box li:nth-child(4) .poster {
+    background: url(../images/image4.png) no-repeat center/contain;
+}
+.btm .inner .board_wrap .board_list .info {
+     height: 440px;
+     width: 1000px;
+     margin-left: 10%;
+}
+.btm .inner .board_wrap .board_list .info  ul {
+    display: flex;
+}
+.btm .inner .board_wrap .board_list .info  ul li {
+    border-radius: 100px;
+    background-color: white;
+    width: 150px; height: 60px;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    font-family: 'pre-re';
+    position: relative;
+}
+.btm .inner .board_wrap .board_list .info ul .prize {
+    color: #00A753;
+}
+.btm .inner .board_wrap .board_list .info ul .ended {
+    color: #414141;
+}
+.btm .inner .board_wrap .board_list .info ul .festa {
+    color: #DE88FF;
+}
+.btm .inner .board_wrap .board_list .info ul .hd {
+    color: #FF9810;
+}
+.btm .inner .board_wrap .board_list .info ul .local {
+    color: #0D2B8E;
+}
+.btm .inner .board_wrap .board_list .info .event_tit {
+    margin: 30px 10px;
+}
+.btm .inner .board_wrap .board_list .info .event_tit  p  b {
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 1.5px;
+}
+.btm .inner .board_wrap .board_list li a:hover .info .event_tit  p  b{
+    color: #3482BE;
+    border-bottom: 1px solid #3482BE;
+    padding-bottom: 2px;
+}
+.btm .inner .board_wrap .board_list .info .event_tit  p {
+    font-size: 25px;
+    color: #3F3F3F;
+    padding-top: 20px;
+}
+.btm .inner .board_wrap .board_list .info .event_tit  p span {
+    color: #000;
+    padding-right: 35px;
+}
+.btm .inner .board_wrap .board_list ul li .find {
+    position: absolute;
+    right: 5%; bottom: 10%;
+    border-radius: 100px;
+    background-color: white;
+    width: 180px; height: 70px;
+    font-size: 27px;
+    font-family: 'pre-re';
+    line-height: 2.5;
+}
+.btm .inner .board_wrap .board_list ul li .find span {
+    width: 60px; height: 60px;
+    background: url(../images/car.png)no-repeat 10px 5px/100%;
+}
+
+
+
+
+
+
+
+
+/* -----------------------------🎈footer🎈--------------------------- */
+footer a, footer p {
+    color: #fff;
+    font-family: 'Pretendard-Regular';
+}
+footer {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    padding-top: 120px;
+    z-index: 8;
+    margin-top: -110px;
+}
+
+footer .inner {
+    width: 90%;
+    padding: 80px 60px;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .inner .left  {
+    width:30%;
+    margin: 0 auto;
+}
+footer .inner .left a {
+    width: 260px;
+    height: 100px;
+    background: url(../images/hangang\ logo.png) no-repeat center/contain;
+    display: block;
+    z-index: 6;
+}
+
+footer .inner .mid {
+    width: 40%;
+}
+
+
+footer .inner .mid .top {
+    padding: 20px 0;
+}
+footer .inner .mid .top a {
+   font-size: 1.2rem;
+   padding: 0 13% 0 0;
+   font-weight: bold;
+}
+
+footer .inner .mid .btn p {
+    font-size: 1.1rem;
+    line-height: 35px;
+}
+footer .inner .mid .btn .copyright {
+    font-size: 1rem;
+}
+
+footer .inner .right {
+    width: 30%;
+    position: relative;
+}
+
+footer .inner .right .snslogo {
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer .inner .right .snslogo .insta {
+    position: absolute;
+    left: 10%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/insta.png) no-repeat center/contain;
+}
+footer .inner .right .snslogo .youtube {
+    position: absolute;
+    top: 0; left: 37%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/youtube\ 1.png) no-repeat center/contain;
+}
+
+footer .inner .right .snslogo .facebook {
+    position: absolute;
+    top: 0; left: 60%;
+    width: 50px; 
+    height: 50px;
+    background: url(../images/facebook\ 1.png) no-repeat center/contain;
+}
+
+
+footer .inner .right .hangangpark a {
+width: 250px;
+height: 100px;
+background: url(../images/h_logo.png) no-repeat center/contain;
+display: block;
+position: absolute;
+bottom: 0%; right: 35%;
+}
+
+.gotop {
+    width: 100px; height: 100px;
+    background: url(../images/gotop.png) no-repeat center/contain;
+    position: fixed;
+    bottom: 100px; right: 7%;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.5s;
+}
